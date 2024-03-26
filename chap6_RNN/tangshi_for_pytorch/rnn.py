@@ -62,8 +62,7 @@ class RNN_model(nn.Module):
         # here you need to put the "batch_input"  input the self.lstm which is defined before.
         # the hidden output should be named as output, the initial hidden state and cell state set to zero.
         # ???
-        output, _ = self.rnn_lstm(batch_input, (torch.zeros(2, 1, self.lstm_dim).to(device), 
-                                                torch.zeros(2, 1, self.lstm_dim).to(device)))
+        output, _ = self.rnn_lstm(batch_input)
 
 
 
